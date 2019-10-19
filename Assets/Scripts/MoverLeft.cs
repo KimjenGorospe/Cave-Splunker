@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//allows the spear / darts that spawn to move left
 public class MoverLeft : MonoBehaviour {
 
     //Variable Declaration
@@ -18,6 +19,7 @@ public class MoverLeft : MonoBehaviour {
 	void Update () {
 
         }
+    //if they hit anything it automatically destroys the spear
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "GroundWall")

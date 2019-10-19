@@ -1,26 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
+
+    [Header("Player Movement")]
     public int playerSpeed = 10;
     public bool facingRight = true;
     public int playerJumpPower = 1250;
     private float moveX;
     public float textTime = 2.0f;
     public float textIns = 6.0f;
+
+    [Header("Bool Settings")]
     public bool isGrounded;
     public bool Treasure;
+
+    [Header("UI Elements")]
     public GameObject gameoverText;
     public GameObject restartButton;
     public GameObject victoryText;
     public GameObject exitText;
     public GameObject instructionText;
+    public Text scoreText;
+
+    [Header("Game Spawners / Elements")]
     public GameObject Diamond;
     public GameObject Boulder;
     public GameObject Exit;
     public Transform Spawner;
 
+    private float Score = 120;
     // Use this for initialization
     void Start () {
         gameoverText.SetActive(false);
@@ -32,8 +43,13 @@ public class PlayerMove : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update() {
+    void Update() 
+    {
         Move();
+        if (Score > 0)
+        {
+            CalculateScore();
+        }
         textTime -= Time.deltaTime;
         textIns -= Time.deltaTime;
         if (textTime < 0)
@@ -135,5 +151,11 @@ public class PlayerMove : MonoBehaviour {
         Vector2 localScale = gameObject.transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    void CalculateScore()
+    {
+        Score -= Time.deltaTime;
+        scoreText.text = ("Score:" + Score);
     }
 }

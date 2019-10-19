@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//makes the camera follow the player
 public class CameraMove : MonoBehaviour
 {
 

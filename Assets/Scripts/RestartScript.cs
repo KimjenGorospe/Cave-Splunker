@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//if the player dies then the player can restart the scene
 public class RestartScript : MonoBehaviour {
 
 	// Use this for initialization

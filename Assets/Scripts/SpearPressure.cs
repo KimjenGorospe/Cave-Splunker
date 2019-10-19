@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//If the player steps on a pressure plate it sets the spear trap to active for 2 seconds
 public class SpearPressure : MonoBehaviour {
 
     public GameObject Spear;

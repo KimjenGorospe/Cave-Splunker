@@ -11,11 +11,9 @@ public class Boundary
 }
 
 public class PlayerController : MonoBehaviour {
-    //-10 5, 4,-4
     //Variable Declaration
     [Header("Movement Settings")]
     public float speed = 12.0f;
-    //public float xMin, xMax, yMin, yMax;
 
     private Rigidbody2D rBody;
 
@@ -35,18 +33,11 @@ public class PlayerController : MonoBehaviour {
         // Read input
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
-        //Debug.Log("x: " + horiz + ",y: " + vert);
 
         Vector2 movement = new Vector2(horiz, vert);
 
         //Move the Player
         //Rigidbody2D rBody = GetComponent<Rigidbody2D>();
         rBody.velocity = movement * speed;
-
-        //Restricts the player from leaving the play area
-        /*rBody.position = new Vector2(
-            Mathf.Clamp(rBody.position.x, boundary.xMin, boundary.xMax), // Restricts on the X postition to xMin and xMax
-            Mathf.Clamp(rBody.position.y, boundary.yMin, boundary.yMax)); // Restricts on the Y postition to yMin and yMax
-            */
     }
 }

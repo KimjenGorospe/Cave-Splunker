@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//if the player steps on the pressure plate it spawns a dart
 public class PressureDual: MonoBehaviour {
     public GameObject Dart;
     public GameObject Dart2;

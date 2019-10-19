@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script handles the auto instantiation of darts from the dart spawner
+// every 2 seconds darts automatically spawn
 public class AutoDart : MonoBehaviour {
     public GameObject Dart;
     public Transform Spawner;

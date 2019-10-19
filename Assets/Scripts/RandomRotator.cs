@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//makes the boulder spin in a random rotation
 public class RandomRotator : MonoBehaviour {
 
     public float tumble;

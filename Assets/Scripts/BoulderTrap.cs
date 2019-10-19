@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//spawns the boulder at the top of the map outside of the camera's view
 public class BoulderTrap : MonoBehaviour {
     public GameObject Dart;
     public Transform Spawner;

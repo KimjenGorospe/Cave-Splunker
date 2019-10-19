@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script handles the movement of the boulder that spawn at the end of the level
 public class BoulderMove : MonoBehaviour {
 
     //Variable Declaration
